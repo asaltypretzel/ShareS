@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://bulma.io/css/bulma-docs.min.css?v=201904171453">
     <link rel="stylesheet" href="test.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <meta name="theme-color" content="#06063e" />
 </head>
 <body>
         <div class="wrapper">
@@ -18,7 +19,7 @@
 <nav class="navbar is-transparent" role="navigation" aria-label="main navigation" style="background-color: transparent; background-image: none;">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://bulma.io">
-        <img src="shareSICO.png" height="35">
+        <img src="ShareSICO.png" height="35">
       </a>
   
       <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -55,6 +56,52 @@
       </div>
     </div>
   </nav>
+
+  <div class="blurred-box has-text-centered">
+    <form class="form-horizontal" enctype="multipart/form-data">
+      <fieldset>
+      
+      
+      <!-- Text input-->  
+      <div >
+        <div>
+          <input id="textinput-0" name="textinput-0" type="text" style="color: #c9c9c9 !important;" placeholder="Password" >
+        </div>
+      </div>
+      
+      <!-- Password input-->
+      <div >
+        <div>
+          <input id="passwordinput-0" name="passwordinput-0" type="password" style="color: #c9c9c9 !important;" placeholder="Pupload" >
+        </div>
+      </div>
+      <br />
+      <!-- File Button --> 
+      <div class="file is-centered" >
+        <label class="file-label">
+          <input class="file-input" style="background-color: white;" type="file" name="filebutton-0" onchange="if (this.files.length > 0) document.getElementById('filename-filebutton-0').innerHTML = this.files[0].name;">
+          <span class="file-cta">
+            <span class="file-icon">
+              <i class="fa fa-upload" style="color: #f96697 !important;"></i>
+            </span>
+            <span class="file-label" style="color: #f96697 !important; border: none;" id="filename-filebutton-0">
+              Choose a file…
+            </span>
+          </span>
+        </label>
+      </div>
+      <br />
+      <!-- Button -->
+      <div class="field has-addons has-addons-centered">
+        <div class="control">
+          <button id="singlebutton-0" name="singlebutton-0" class="button" style="background-color: #f96697; color: white !important; border: none;">Upload</button>
+        </div>
+      </div>
+      
+      </fieldset>
+      </form>
+      
+    </div>
 
 
   </div>
