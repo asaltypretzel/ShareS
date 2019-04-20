@@ -5,35 +5,35 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ShareS</title>
-    <link rel="stylesheet" href="https://bulma.io/css/bulma-docs.min.css?v=201904171453">
     <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="https://bulma.io/css/bulma-docs.min.css?v=201904171453">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script defer src="test.js"></script>
+    
     <meta name="theme-color" content="#06063e" />
 </head>
 
 <body>
     <div class="wrapper">
         <div class="stars stars-1"></div>
-        <div class="blink"></div>
         <div class="stars stars-2"></div>
-        <div class="blink blink-2"></div>
         <div class="sky"></div>
         <nav class="navbar is-transparent" role="navigation" aria-label="main navigation" style="background-color: transparent; background-image: none;">
             <div class="navbar-brand">
                 <a class="navbar-item" href="https://github.com/TannerReynolds/ShareS">
                     <img src="ShareSICO.png" height="35">
                 </a>
-
-                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <a role="button" class="navbar-burger" id="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
-                </a>
+                  </a>
             </div>
-
-            <div id="navbarBasicExample" class="navbar-menu">
+            
+            <div id="navMenu" class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item has-text-white">
+                    <a class="navbar-item has-text-white" href="">
           Gallery
         </a>
 
@@ -50,15 +50,14 @@
                 <div class="navbar-end">
                     <div class="navbar-item">
                         <div class="buttons">
-                            <a class="button bd-rainbow is-medium" style="border:none;">
-                                <i class="fab fa-discord" style="color: white !important;"></i>
+                            <a class="button bd-rainbow is-medium has-text-white" style="border:none;"> 
+                                <i class="fab fa-discord" style="color: white !important;"></i><b>Discord</b>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
         </nav>
-
         <div class="blurred-box has-text-centered">
             <form class="form-horizontal" enctype="multipart/form-data">
                 <fieldset>
@@ -66,14 +65,14 @@
                     <!-- Text input-->
                     <div>
                         <div>
-                            <input id="textinput-0" name="textinput-0" type="text" style="color: #c9c9c9 !important;" placeholder="Password">
+                            <input id="password" name="password" type="text" style="color: #c9c9c9 !important;" placeholder="Password">
                         </div>
                     </div>
 
                     <!-- Password input-->
                     <div>
                         <div>
-                            <input id="passwordinput-0" name="passwordinput-0" type="password" style="color: #c9c9c9 !important;" placeholder="Pupload">
+                            <input id="pupload" name="pupload" type="password" style="color: #c9c9c9 !important;" placeholder="Pupload">
                         </div>
                     </div>
                     <br />

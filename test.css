@@ -3,14 +3,22 @@ body {
     padding:10px !important;
    padding-bottom:60px !important; 
   }
-  
-  footer {
-    position:absolute;
-    bottom:0;
-    width:100%;
-    height:60px;   /* Height of the footer */
-    background-color: transparent !important;
- }
+
+  @media only screen and (max-height: 564px) {
+    footer {
+      display: none !important;
+   }
+  }
+  @media only screen and (min-height: 0px) {
+    footer {
+      position: fixed;
+      bottom:0;
+      width:100%;
+      height:60px;   /* Height of the footer */
+      background-color: transparent !important;
+      z-index: 1;
+   }
+  }
 
   .wrapper {
     position: absolute;
@@ -19,11 +27,11 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: -1;
+    z-index: 0;
   }
   
   .stars {
-    z-index: 10;
+    z-index: 0;
     width: 2px;
     height: 2px;
     border-radius: 50%;
@@ -69,12 +77,6 @@ body {
     right: 0;
     background: radial-gradient(ellipse 100% 100% at bottom, rgba(150, 78, 150, 0.5) 0%, rgba(20, 20, 205, 0.3) 80%)
   } 
-  .logo {
-    
-    margin: 0 auto;
-    display: block;
-    margin-top: 10px;
-  }
 
   .blurred-box{
     align-content: center;
@@ -90,6 +92,11 @@ body {
     border-radius: 10px;
     overflow: hidden;
     padding: 10px;
+    z-index: 1 !important;
+  }
+
+  .has-text-centered {
+    z-index: 1;
   }
 
   /* * { outline: solid 0.25rem hsla(210, 100%, 100%, 0.5); } */
@@ -109,9 +116,27 @@ body {
    top: -25px;  
    bottom: 0;
    box-shadow: inset 0 0 0 200px rgba(255,255,255,0.15);
+   border-radius: 10px;
    filter: blur(15px);
-   z-index: -1;
+   z-index: -1 !important;
   }
+
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  @media only screen and (max-width: 1088px) {
+  .navbar-menu {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    background-image: none !important;
+  }
+}
+@media only screen and (min-width: 1089px) {
+  .navbar-menu {
+    background-color: transparent !important;
+    background-image: none !important;
+  }
+}
 
   @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
 
@@ -207,7 +232,7 @@ input {
   font-family: 'Lato', sans-serif;
   font-size: 0.875em;
   width: 200px;
-  height: 50px;
+  height: 40px;
   padding: 15px 15px 15px 15px;
   
   background: transparent;
@@ -221,6 +246,7 @@ input {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
+  z-index: 1;
 }
 
 input:hover {
@@ -235,6 +261,8 @@ textarea {
   max-height: 110px;
   padding: 15px,15px,15px,15px;
   margin-right: 15px;
+
+  z-index: 1;
   
   background: transparent;
   outline: none;
